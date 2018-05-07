@@ -515,7 +515,7 @@ while True:
 								sys.exit(0)
 							##############################################
 							if "招待URL:" in msg.text:
-								gid = msg.text.replace("@招待URL:","")
+								gid = msg.text.replace("招待URL:","")
 								gurl = client.reissueGroupTicket(gid)
 								client.sendMessage(msg.to,"line://ti/g/" + gurl)
 							##############################################
@@ -636,7 +636,7 @@ while True:
 									    client.kickoutFromGroup(msg.to,[jj])
 									except:
 										client.kickoutFromGroup(msg.to,[jj])
-								client.sendMessage(msg.to,"kick完了。")
+								client.sendMessage(msg.to,"排除完了しました。")
 							##############################################
 							if "Nk:" in msg.text:
 								name = msg.text.replace("Nk:",'')
@@ -681,13 +681,13 @@ while True:
 									else:
 										stop["bls"][msg.contentMetadata["mid"]] = True
 										stop["wb"] = False
-										client.sendMessage(msg.to,"black in！")
+										client.sendMessage(msg.to,"ブラリスに登録しました。")
 										f=codecs.open('black.json','w','utf-8')
 										json.dump(stop["bls"], f, sort_keys=True, indent=4,ensure_ascii=False)
 								if stop["db"] == True:
 									if msg.contentMetadata["mid"] in stop["bls"]:
 										del stop["bls"][msg.contentMetadata["mid"]]
-										client.sendMessage(msg.to,"black out！")
+										client.sendMessage(msg.to,"ブラリスを解除しました。")
 										stop["db"] = False
 										f=codecs.open('black.json','w','utf-8')
 										json.dump(stop["bls"], f, sort_keys=True, indent=4,ensure_ascii=False)

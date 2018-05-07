@@ -1,5 +1,5 @@
 # -*- coding:utf-8 -*-
-from negiX import *
+from negiXa import *
 import json, time, random, tempfile, os, sys, urllib.request, urllib.parse, urllib.error, threading, codecs, datetime
 import imp
 imp.reload(sys)

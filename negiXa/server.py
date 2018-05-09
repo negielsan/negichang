@@ -26,12 +26,12 @@ class LineServer(object):
         'LINE_MUSIC': '1381425814'
     }
 
-    USER_AGENT  = 'Line/7.18.1'
+    USER_AGENT  = 'Line/8.3.0'
     APP_TYPE    = ApplicationType.IOS
-    APP_NAME    = 'IOSIPAD\t7.18.1\tiPhone OS\t11.2.5'
+    APP_NAME    = 'IOSIPAD\t8.3.0\tiPhone OS\t11.2.5'
     CARRIER     = '51089, 1-0'
-    SYSTEM_NAME = 'halfbot(exclusib)'
-    IP_ADDR     = '8.8.8.8'
+    SYSTEM_NAME = 'hannari'
+    IP_ADDR     = '1.1.1.1'
     EMAIL_REGEX = re.compile(r"[^@]+@[^@]+\.[^@]+")
 
     _session    = requests.session()
